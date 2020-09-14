@@ -1,0 +1,37 @@
+#include <iostream>
+using namespace std;
+
+class FVBOOK{
+	private :
+		string title;
+	public :
+		string author;
+		int pages;
+	FVBOOK(string atitle,string an_author,int apages){
+		settitle(atitle);
+		author=an_author;
+		pages=apages;
+	}
+	bool isbig(){
+		if(pages>=300){
+			return true;
+		}return false;
+	}
+	void settitle(string atitle){
+		if(atitle=="harry potter" || atitle=="antigone" || atitle=="condide"){
+			title=atitle;
+		}else{
+			title="not my FV";
+		}
+	}	
+	string gettitle(){
+		return title;
+	}
+};
+int main(){
+	
+	FVBOOK book1("harry potter","someone",400);
+	cout<<book1.gettitle()<<endl;
+	cout<<book1.isbig();
+
+}
